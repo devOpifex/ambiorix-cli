@@ -10,8 +10,10 @@ Command line interface for [ambiorix](https://ambiorix.john-coene.com).
 
 ## Install
 
+Install globally.
+
 ```bash
-npm install ambiorix-cli
+npm install ambiorix-cli -g
 ```
 
 ## Usage
