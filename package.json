@@ -1,0 +1,21 @@
+{
+  "name": "ambiorix-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "John Coene (jcoenep@gmail.com)",
+  "license": "MIT",
+  "bin": {
+    "ambiorix-cli": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fs": "0.0.1-security",
+    "ncp": "^2.0.0",
+    "path": "^0.12.7"
+  }
+}
