@@ -2,10 +2,9 @@
 
 const path = require('path');
 const chalk = require('chalk');
-const ncp = require('ncp').ncp;
 const utils = require('./src/utils');
- 
-ncp.limit = 16;
+const project = require('./src/project');
+const app = require('./src/app');
 
 getPkgPath = (proj) => {
   return path.join(__dirname, proj)
@@ -13,31 +12,37 @@ getPkgPath = (proj) => {
 
 const run = async () => {
 
-  let pkg = process.argv.slice(2)[0];
+  let args = process.argv.slice(2);
+  let cmd = args[0];
 
-  if(pkg === undefined)
-    return console.error(
-      chalk.red('Missing path to project')
-    )
+  if(cmd === 'create'){
+    let pkg = args[1];
 
-  let path = utils.getFullPath(pkg);
-  let source = getPkgPath('templates/project');
+    if(pkg === undefined){
+      console.error(
+        chalk.red('Missing path to project')
+      )
+      return ;
+    }
 
-  if (utils.directoryExists(path)) {
-    console.log(chalk.red('Already exists'));
-    process.exit();
+    let path = utils.getFullPath(pkg);
+    let source = getPkgPath('templates/project');
+
+    if (utils.directoryExists(path)) {
+      console.log(chalk.red('Already exists'));
+      process.exit();
+    }
+
+    project.createProject(source, path, pkg);
+  } else if(cmd === 'start'){
+    app.start();
+  } else if(cmd === 'stop') {
+    app.stop();
+  } else {
+    console.error(chalk.red('Command not found, pass: create, start, or stop'))
   }
   
-  ncp(source, path, function (err) {
-    if (err) {
-      return console.error(
-        chalk.red(err)
-      );
-    }
-    console.log(
-      chalk.green(pkg), 'successfully created!'
-    );
-   });
+  
 };
 
 run();
