@@ -2,7 +2,7 @@
 
 # ambiorix-cli
 
-<img src="man/figures/ambiorix.png" height = "200px"/>
+<img src="https://ambiorix.john-coene.com/_assets/ambiorix.png" height = "200px"/>
 
 Command line interface for [ambiorix](https://ambiorix.john-coene.com).
 
