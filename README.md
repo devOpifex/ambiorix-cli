@@ -28,5 +28,5 @@ Starts & stop the application.
 
 ```bash
 ambiorix-cli start
-ambiorix-cli start
+ambiorix-cli stop
 ```
