@@ -18,8 +18,15 @@ npm install ambiorix-cli -g
 
 ## Usage
 
-Creates application skeleton.
+Creates application skeleton in `myapp` directory.
 
 ```bash
-ambiorix-cli myapp
+ambiorix-cli create myapp
+```
+
+Starts & stop the application.
+
+```bash
+ambiorix-cli start
+ambiorix-cli start
 ```
