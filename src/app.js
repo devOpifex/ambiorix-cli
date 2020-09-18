@@ -9,7 +9,7 @@ module.exports = {
 
   },
   stop: () => {
-
+    
     spawn('R', ['-e', "ambiorix::stop_all()"], { stdio: 'inherit' });
 
   }

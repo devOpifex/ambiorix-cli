@@ -1,14 +1,9 @@
 #!/usr/bin/env node
 
-const path = require('path');
 const chalk = require('chalk');
 const utils = require('./src/utils');
 const project = require('./src/project');
 const app = require('./src/app');
-
-getPkgPath = (proj) => {
-  return path.join(__dirname, proj)
-}
 
 const run = async () => {
 
@@ -26,14 +21,13 @@ const run = async () => {
     }
 
     let path = utils.getFullPath(pkg);
-    let source = getPkgPath('templates/project');
 
     if (utils.directoryExists(path)) {
       console.log(chalk.red('Already exists'));
       process.exit();
     }
 
-    project.createProject(source, path, pkg);
+    project.createProject(path);
   } else if(cmd === 'start'){
     app.start();
   } else if(cmd === 'stop') {
