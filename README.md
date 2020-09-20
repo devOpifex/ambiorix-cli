@@ -30,3 +30,10 @@ Starts & stop the application.
 ambiorix-cli start
 ambiorix-cli stop
 ```
+
+Create template, defaults to HTML
+
+```bash
+ambiorix-cli template homepage
+ambiorix-cli template homepage R
+```

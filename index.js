@@ -32,6 +32,8 @@ const run = async () => {
     app.start();
   } else if(cmd === 'stop') {
     app.stop();
+  } else if(cmd === 'template') {
+    project.createTemplate(args[1], args[2])
   } else {
     console.error(chalk.red('Command not found, pass: create, start, or stop'))
   }
