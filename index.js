@@ -10,7 +10,7 @@ const run = async () => {
   let args = process.argv.slice(2);
   let cmd = args[0];
 
-  if(cmd === 'create'){
+  if(['create-basic', 'create-bootstrap'].includes(cmd)){
     let pkg = args[1];
 
     if(pkg === undefined){
@@ -27,13 +27,17 @@ const run = async () => {
       process.exit();
     }
 
-    project.createProject(path);
+    project.createProject(path, cmd);
   } else if(cmd === 'start'){
     app.start();
   } else if(cmd === 'stop') {
     app.stop();
   } else if(cmd === 'template') {
     project.createTemplate(args[1], args[2])
+  } else if(cmd === 'install-generator') {
+    project.installGenerator();
+  } else if(cmd === 'install') {
+    project.installAmbiorix();
   } else {
     console.error(chalk.red('Command not found, pass: create, start, or stop'))
   }

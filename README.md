@@ -18,10 +18,11 @@ npm install ambiorix-cli -g
 
 ## Usage
 
-Creates application skeleton in `myapp` directory.
+Creates application skeleton in `myapp` directory, wraps the [generator](https://github.com/JohnCoene/ambiorix.generator)
 
 ```bash
-ambiorix-cli create myapp
+ambiorix-cli create-basic myapp
+ambiorix-cli create-bootstrap myapp
 ```
 
 Starts & stop the application.
@@ -36,4 +37,11 @@ Create template, defaults to HTML
 ```bash
 ambiorix-cli template homepage
 ambiorix-cli template homepage R
+```
+
+Install R packages
+
+```bash
+ambiorix-cli install
+ambiorix-cli install-generator
 ```
