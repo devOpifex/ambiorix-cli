@@ -39,7 +39,7 @@ const run = async () => {
   } else if(cmd === 'install') {
     project.installAmbiorix();
   } else {
-    console.error(chalk.red('Command not found, pass: create, start, or stop'))
+    console.error(chalk.red('Command not found, pass: create-basic, create-bootstrap, start, stop, install, or install-generator'))
   }
   
   
