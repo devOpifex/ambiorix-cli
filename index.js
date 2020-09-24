@@ -32,8 +32,10 @@ const run = async () => {
     app.start();
   } else if(cmd === 'stop') {
     app.stop();
-  } else if(cmd === 'template') {
-    project.createTemplate(args[1], args[2])
+  } else if(cmd === 'template-basic') {
+    project.createTemplateBasic(args[1])
+  } else if(cmd === 'template-bootstrap') {
+    project.createTemplateBootstrap(args[1])
   } else if(cmd === 'install-generator') {
     project.installGenerator();
   } else if(cmd === 'install') {

@@ -15,21 +15,21 @@ module.exports = {
       spawn('R', ['-e', "ambiorix.generator::create_bootstrap('" + destination + "')"], { stdio: 'inherit' });
     }
   },
-  createTemplate: (name, ext) => {
+  createTemplateBasic: (name) => {
     if(name === undefined){
       console.error("Must pass template name");
       return ;
     }
 
-    if(ext === undefined)
-      ext = 'html'
-
-    if(!['html', 'R'].includes(ext)){
-      console.error("Must be either 'html' or 'R'")
+    spawn('R', ['-e', "ambiorix.generator::add_template_basic('" + name + "')"], { stdio: 'inherit' });
+  },
+  createTemplateBootstrap : (name) => {
+    if(name === undefined){
+      console.error("Must pass template name");
       return ;
     }
 
-    spawn('R', ['-e', "ambiorix::add_template('" + name + "', '" + ext + "')"], { stdio: 'inherit' });
+    spawn('R', ['-e', "ambiorix.generator::add_template_bootstrap('" + name + "')"], { stdio: 'inherit' });
   },
   installAmbiorix: () => {
     spawn('R', ['-e', "remotes::install_github('JohnCoene/ambiorix')"], { stdio: 'inherit' });

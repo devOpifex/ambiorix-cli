@@ -32,11 +32,11 @@ ambiorix-cli start
 ambiorix-cli stop
 ```
 
-Create template, defaults to HTML
+Add templates.
 
 ```bash
-ambiorix-cli template homepage
-ambiorix-cli template homepage R
+ambiorix-cli template-basic homepage
+ambiorix-cli template-bootstrap homepage
 ```
 
 Install R packages
