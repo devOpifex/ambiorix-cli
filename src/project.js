@@ -13,6 +13,8 @@ module.exports = {
       spawn('R', ['-e', "ambiorix.generator::create_basic('" + destination + "')"], { stdio: 'inherit' });
     } else if (type == 'create-bootstrap'){
       spawn('R', ['-e', "ambiorix.generator::create_bootstrap('" + destination + "')"], { stdio: 'inherit' });
+    } else if (type == 'create-vue'){
+      spawn('R', ['-e', "ambiorix.generator::create_vue('" + destination + "')"], { stdio: 'inherit' });
     }
   },
   createTemplateBasic: (name) => {

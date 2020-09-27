@@ -10,7 +10,7 @@ const run = async () => {
   let args = process.argv.slice(2);
   let cmd = args[0];
 
-  if(['create-basic', 'create-bootstrap'].includes(cmd)){
+  if(['create-basic', 'create-bootstrap', 'create-vue'].includes(cmd)){
     let pkg = args[1];
 
     if(pkg === undefined){
@@ -23,7 +23,7 @@ const run = async () => {
     let path = utils.getFullPath(pkg);
 
     if (utils.directoryExists(path)) {
-      console.log(chalk.red('Already exists'));
+      console.error('Already exists');
       process.exit();
     }
 

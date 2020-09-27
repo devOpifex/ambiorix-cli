@@ -23,6 +23,7 @@ Creates application skeleton in `myapp` directory, wraps the [generator](https:/
 ```bash
 ambiorix-cli create-basic myapp
 ambiorix-cli create-bootstrap myapp
+ambiorix-cli create-vue myapp
 ```
 
 Starts & stop the application.
