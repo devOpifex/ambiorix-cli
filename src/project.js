@@ -1,4 +1,3 @@
-const { underline } = require("chalk");
 const { spawn } = require("child_process");
 
 module.exports = {
