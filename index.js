@@ -9,7 +9,7 @@ const run = async () => {
   let args = process.argv.slice(2);
   let cmd = args[0];
 
-  if(['create-basic', 'create-bootstrap', 'create-vue'].includes(cmd)){
+  if(['create-basic', 'create-bootstrap', 'create-vue', 'create-package'].includes(cmd)){
     let pkg = args[1];
 
     if(pkg === undefined){
@@ -38,7 +38,7 @@ const run = async () => {
   } else if(cmd === 'install') {
     project.installAmbiorix();
   } else {
-    console.error('Command not found, pass: create-basic, create-bootstrap, start, stop, install, or install-generator');
+    console.error('Command not found, pass: create-package, create-basic, create-bootstrap, start, stop, install, or install-generator');
   }
   
   

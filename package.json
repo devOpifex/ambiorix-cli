@@ -1,6 +1,6 @@
 {
   "name": "ambiorix-cli",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "A command line interface for the ambiorix R web framework",
   "main": "index.js",
   "scripts": {
