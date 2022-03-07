@@ -3,10 +3,15 @@ const { spawn } = require("child_process");
 const fs = require('fs');
 
 module.exports = {
-  start: () => {
+  start: (port) => {
     let path = utils.getFullPath('app.R');
 
-    child = spawn('Rscript', [path], { stdio: 'inherit', detached: true });
+    if(port === undefined)
+      port = "NULL"
+
+    let args = `options(ambiorix.port = ${port});source('${path}')`
+
+    child = spawn('R', ["-e", args], { stdio: 'inherit', detached: true });
 
     child.unref();
 

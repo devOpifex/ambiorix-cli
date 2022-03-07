@@ -26,7 +26,7 @@ const run = async () => {
 
     project.createProject(path, cmd);
   } else if(cmd === 'start'){
-    app.start();
+    app.start(args[2]);
   } else if(cmd === 'stop') {
     app.stop();
   } else if(cmd === 'template-basic') {
