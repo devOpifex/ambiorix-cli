@@ -2,7 +2,7 @@
 
 # ambiorix-cli
 
-<img src="https://ambiorix.john-coene.com/_assets/ambiorix.png" height = "200px"/>
+<img src="https://ambiorix.dev/img/ambiorix.png" height = "200px"/>
 
 Command line interface for [ambiorix](https://ambiorix.john-coene.com).
 
@@ -30,6 +30,7 @@ Starts & stop the application.
 
 ```bash
 ambiorix-cli start
+ambiorix-cli start 5000
 ambiorix-cli stop
 ```
 
